@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
+//http://localhost:8080/api/vi/calculatoradd?num1=3&num2=4
 @RestController
 @RequestMapping("/api/vi/calculator")
 public class CalculatorController {
