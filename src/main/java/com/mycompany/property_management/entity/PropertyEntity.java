@@ -1,17 +1,36 @@
-package com.mycompany.property_management.dto;
+package com.mycompany.property_management.entity;
 
+
+import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.boot.autoconfigure.web.WebProperties;
 
 
+@Entity
+@Table(name = "PROPERTY_TABLE")
+@NoArgsConstructor
+public class PropertyEntity {
 
-public class PropertyDTO {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    @Column(name = "PROPERTY_TITLE",nullable = false)
     private String title;
     private String desc;
     private String ownername;
     private String owneremail;
     private double price;
-    private String Address;
+
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getTitle() {
         return title;
@@ -37,14 +56,6 @@ public class PropertyDTO {
         this.ownername = ownername;
     }
 
-    public String getOwneremail() {
-        return owneremail;
-    }
-
-    public void setOwneremail(String owneremail) {
-        this.owneremail = owneremail;
-    }
-
     public double getPrice() {
         return price;
     }
@@ -60,4 +71,14 @@ public class PropertyDTO {
     public void setAddress(String address) {
         Address = address;
     }
+
+    public String getOwneremail() {
+        return owneremail;
+    }
+
+    public void setOwneremail(String owneremail) {
+        this.owneremail = owneremail;
+    }
+
+    private String Address;
 }
