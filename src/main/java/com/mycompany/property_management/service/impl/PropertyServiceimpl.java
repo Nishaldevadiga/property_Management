@@ -1,5 +1,6 @@
 package com.mycompany.property_management.service.impl;
 
+import com.mycompany.property_management.convertor.PropertyConvertor;
 import com.mycompany.property_management.dto.PropertyDTO;
 import com.mycompany.property_management.entity.PropertyEntity;
 import com.mycompany.property_management.repository.PropertyRepository;
@@ -12,18 +13,15 @@ public class PropertyServiceimpl implements PropertyService {
     @Autowired
     private PropertyRepository propertyRepository;
 
+    @Autowired
+    private PropertyConvertor propertyConvertor;
+
     @Override
 
     public PropertyDTO saveproperty(PropertyDTO propertydto) {
 
-        PropertyEntity pe=new PropertyEntity();
-        pe.setTitle(propertydto.getTitle());
-        pe.setAddress(propertydto.getAddress());
-        pe.setDesc(propertydto.getDesc());
-        pe.setOwneremail(propertydto.getOwneremail());
-        pe.setOwnername(propertydto.getOwnername());
-        pe.setPrice(propertydto.getPrice());
 
+         PropertyEntity pe=propertyConvertor.convertDTOEntity(propertydto);
         propertyRepository.save(pe);
         return null;
     }
