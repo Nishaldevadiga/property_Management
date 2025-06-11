@@ -6,7 +6,17 @@ import lombok.Setter;
 
 
 public class PropertyDTO {
+    private Long id;
     private String title;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     private String desc;
     private String ownername;
     private String owneremail;

@@ -22,7 +22,9 @@ public class PropertyServiceimpl implements PropertyService {
 
 
          PropertyEntity pe=propertyConvertor.convertDTOEntity(propertydto);
-        propertyRepository.save(pe);
-        return null;
+        pe= propertyRepository.save(pe);
+        propertydto=propertyConvertor.convertEntityToDTO(pe);
+
+        return propertydto;
     }
 }
