@@ -1,2 +1,2 @@
 Java Property-Management
-SpringBoot
+SpringBoot-h2 database
