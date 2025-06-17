@@ -1,5 +1,6 @@
 package com.mycompany.property_management.dto;
 
+import jakarta.persistence.Column;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,7 +17,7 @@ public class PropertyDTO {
     public void setId(Long id) {
         this.id = id;
     }
-
+    @Column(name = "`desc`")
     private String desc;
     private String ownername;
     private String owneremail;

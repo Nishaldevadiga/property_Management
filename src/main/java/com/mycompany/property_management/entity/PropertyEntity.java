@@ -18,6 +18,7 @@ public class PropertyEntity {
     private Long id;
     @Column(name = "PROPERTY_TITLE",nullable = false)
     private String title;
+    @Column(name = "`desc`")
     private String desc;
     private String ownername;
     private String owneremail;
