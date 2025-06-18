@@ -20,8 +20,6 @@ public class PropertyEntity {
     private String title;
     @Column(name = "`desc`")
     private String desc;
-    private String ownername;
-    private String owneremail;
     private double price;
 
 
