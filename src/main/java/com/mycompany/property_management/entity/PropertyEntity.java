@@ -47,14 +47,6 @@ public class PropertyEntity {
         this.desc = desc;
     }
 
-    public String getOwnername() {
-        return ownername;
-    }
-
-    public void setOwnername(String ownername) {
-        this.ownername = ownername;
-    }
-
     public double getPrice() {
         return price;
     }
@@ -71,13 +63,6 @@ public class PropertyEntity {
         Address = address;
     }
 
-    public String getOwneremail() {
-        return owneremail;
-    }
-
-    public void setOwneremail(String owneremail) {
-        this.owneremail = owneremail;
-    }
 
     private String Address;
 }

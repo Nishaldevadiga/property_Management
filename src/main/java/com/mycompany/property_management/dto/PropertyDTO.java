@@ -19,8 +19,6 @@ public class PropertyDTO {
     }
     @Column(name = "`desc`")
     private String desc;
-    private String ownername;
-    private String owneremail;
     private double price;
     private String Address;
 
@@ -38,22 +36,6 @@ public class PropertyDTO {
 
     public void setDesc(String desc) {
         this.desc = desc;
-    }
-
-    public String getOwnername() {
-        return ownername;
-    }
-
-    public void setOwnername(String ownername) {
-        this.ownername = ownername;
-    }
-
-    public String getOwneremail() {
-        return owneremail;
-    }
-
-    public void setOwneremail(String owneremail) {
-        this.owneremail = owneremail;
     }
 
     public double getPrice() {
